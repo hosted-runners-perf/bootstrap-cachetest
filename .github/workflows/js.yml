@@ -1,10 +1,6 @@
 name: JS Tests
 
 on:
-  push:
-    branches-ignore:
-      - "dependabot/**"
-  pull_request:
   workflow_dispatch:
 
 env:
@@ -14,7 +10,7 @@ env:
 jobs:
   run:
     name: JS Tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Clone repository
