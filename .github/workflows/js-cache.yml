@@ -1,7 +1,9 @@
-name: JS Tests
+name: JS Tests Cache
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "*/30 * * * *"
 
 env:
   FORCE_COLOR: 2
