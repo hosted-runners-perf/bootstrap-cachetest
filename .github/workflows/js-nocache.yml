@@ -12,8 +12,13 @@ env:
 jobs:
   run:
     name: JS Tests
-    runs-on: ubuntu-22.04
-
+    runs-on: ${{ matrix.os }}
+    strategy:
+        matrix:
+            os:
+              - ubuntu-latest
+              - macos-latest
+              - windows-2022
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
